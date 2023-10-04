@@ -1,41 +1,25 @@
+
 package OOP1.JavaOOP1;
 
 import java.util.ArrayList;
 
-public class GeoTree {
+public class GeoTree<T> {
 
     private ArrayList<Node> tree = new ArrayList<>();
 
     public ArrayList<Node> getTree() {
         return tree;
-    
-    public ArrayList<Node> getTree() {
-        return tree;
-    }
     }
 
-    // связь родитель - ребенок
-    public void appendPerentChild(Person parent, Person children) {
-        tree.add(new Node(parent, Relationship.parent, children));
-        tree.add(new Node(children, Relationship.children, parent));
-    
-    public ArrayList<Node> getTree() {
-        return tree;
-    }
+    // Parent-child relationship
+    public void appendParentChild(Person parent, Person child) {
+        tree.add(new Node(parent, Relationship.PARENT, child));
+        tree.add(new Node(child, Relationship.CHILD, parent));
     }
 
-    // связь муж - жена
-    public void appendVifeHusbent(Person vife, Person husbent) {
-        tree.add(new Node(vife, Relationship.vife, husbent));
-        tree.add(new Node(husbent, Relationship.husbent, vife));
-    
-    public ArrayList<Node> getTree() {
-        return tree;
+    // Wife-husband relationship
+    public void appendWifeHusband(Person wife, Person husband) {
+        tree.add(new Node(wife, Relationship.WIFE, husband));
+        tree.add(new Node(husband, Relationship.HUSBAND, wife));
     }
-    }
-
-
-    public ArrayList<Node> getTree() {
-        return tree;
-    }
-    }
+}

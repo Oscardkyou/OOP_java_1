@@ -1,18 +1,32 @@
+
 package OOP1.JavaOOP1;
-public class Node {
-    public Node(Person p1, Relationship re, Person p2) {
-        this.p1 = p1;
-        this.re = re;
-        this.p2 = p2;
+
+import java.util.ArrayList;
+
+public class Node<T> {
+    private T person;
+    private ArrayList<Node<T>> parents = new ArrayList<>();
+    private ArrayList<Node<T>> children = new ArrayList<>();
+    private ArrayList<Node<T>> spouses = new ArrayList<>();
+
+    public Node(T person) {
+        this.person = person;
     }
 
-    Person p1;
-    Relationship re;
-    Person p2;
-
-    @Override
-    public String toString() {
-        return String.format("<%s %s %s>", p1, re, p2);
+    public T getPerson() {
+        return person;
     }
-    
+
+    public ArrayList<Node<T>> getParents() {
+        return parents;
+    }
+
+    public ArrayList<Node<T>> getChildren() {
+        return children;
+    }
+
+    public ArrayList<Node<T>> getSpouses() {
+        return spouses;
+    }
 }
+
