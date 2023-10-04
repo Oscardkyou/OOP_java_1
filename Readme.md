@@ -1,1 +1,37 @@
-Реализовать, с учетом ооп подхода, приложение Для проведения исследований с генеалогическим древом. Идея: описать некоторое количество компонент, например: модель человека компонента хранения связей и отношений между людьми: родитель, ребёнок - классика, но можно подумать и про отношение, брат, свекровь, сестра и т. д. компонент для проведения исследований дополнительные компоненты, например отвечающие за вывод данных в консоль, загрузку и сохранения в файл, получение\построение отдельных моделей человека Под “проведением исследования” можно понимать получение всех детей выбранного человека. Описать с ООП стиле, логику взаимодействия объектов реального мира между собой: шкаф-человек. Какие члены должны быть у каждого из классов (у меня на семинаре студенты пришли к тому, чтобы продумать логику взаимодействия жена разрешает открыть дверцу шкафа мужу, после чего эту дверцу можно открыть) Подумать как описать логику взаимодействия человека и домашнего питомца. Сценарий: “Человек “зовёт” котика “кис-кис”, котик отзывается. Какое ещё взаимодействие может быть? Продумать какие проблемы могут возникнуть в том, коде, который они написали. Например в первой задаче (с генеалогическим древом) мы можем знать о двух людях, но не знаем в каких “отношениях” они были - двоюродные или троюродные, или мы точно знаем как звали прапрабабушку, но совершенно не знаем прабабушку - как хранить такие связи или что будет если в компоненту обхода передать ссылку на null-дерево. У задач нет единственного правильного решения
+
+# OOP Java Homework Project
+
+This is a Java project containing multiple classes that presumably deal with object-oriented programming concepts.
+
+## Files and Classes
+
+- `FileHandler.java`: A class for handling file operations.
+- `FileSerializable.java`: An interface or class related to serialization of objects.
+- `GeoTree.java`: A class representing a geographical tree structure.
+- `Main.java`: The main entry point for the application.
+- `Node.java`: Represents a node, possibly for the GeoTree.
+- `Person.java`: Represents a person entity.
+- `Relationship.java`: Represents relationships, likely between `Person` objects.
+- `Research.java`: Potentially a class for conducting some form of research.
+- `GeoTreeIterator.java`: An iterator for the `GeoTree`.
+- `UserInteraction.java`: A class to handle user interactions.
+- `GeoTreeCLI.java`: A command line interface for the `GeoTree`.
+
+## Setup and Execution
+
+1. Ensure you have Java installed on your machine.
+2. Navigate to the project directory.
+3. Compile the Java files using the `javac` command.
+4. Run the `Main.java` to start the application.
+
+## License
+
+Please refer to the project's license file or the project creator for information on licensing.
+
+## Contact
+
+For any questions, suggestions, or feedback, please contact the project creator.
+
+---
+
+*This README is generated based on the file names and common Java project structures. It's recommended to review and adjust the content to better fit the actual project details.*
