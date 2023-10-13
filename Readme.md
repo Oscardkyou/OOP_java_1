@@ -1,37 +1,17 @@
-
-# OOP Java Homework Project
-
-This is a Java project containing multiple classes that presumably deal with object-oriented programming concepts.
-
-## Files and Classes
-
-- `FileHandler.java`: A class for handling file operations.
-- `FileSerializable.java`: An interface or class related to serialization of objects.
-- `GeoTree.java`: A class representing a geographical tree structure.
-- `Main.java`: The main entry point for the application.
-- `Node.java`: Represents a node, possibly for the GeoTree.
-- `Person.java`: Represents a person entity.
-- `Relationship.java`: Represents relationships, likely between `Person` objects.
-- `Research.java`: Potentially a class for conducting some form of research.
-- `GeoTreeIterator.java`: An iterator for the `GeoTree`.
-- `UserInteraction.java`: A class to handle user interactions.
-- `GeoTreeCLI.java`: A command line interface for the `GeoTree`.
-
-## Setup and Execution
-
-1. Ensure you have Java installed on your machine.
-2. Navigate to the project directory.
-3. Compile the Java files using the `javac` command.
-4. Run the `Main.java` to start the application.
-
-## License
-
-Please refer to the project's license file or the project creator for information on licensing.
-
-## Contact
-
-For any questions, suggestions, or feedback, please contact the project creator.
-
----
-
-*This README is generated based on the file names and common Java project structures. It's recommended to review and adjust the content to better fit the actual project details.*
+1. **SRP (Принцип единой ответственности)**:
+    - **GeoTreeCLI**: Теперь этот класс фокусируется на предоставлении командно-строкового интерфейса для взаимодействия с пользователем. Прямые ссылки на модель `GeoTree` были удалены, чтобы сосредоточиться на его основной ответственности.
+    - **GeoTreeService**: После рефакторинга этот класс является посредником между данными и представлением, и обеспечивает функции, такие как сохранение, загрузка и сортировка дерева.
+    - Большинство других классов также имеют четко определенную ответственность.
+2. **OCP (Принцип открытости/закрытости)**:
+    - **GeoTree**: Этот класс теперь легко расширяется без модификации, так как логика сортировки была вынесена в отдельные стратегии. Новые методы сортировки могут быть добавлены без изменения существующего кода.
+3. **LSP (Принцип подстановки Лисков)**:
+    - Ваш код, насколько я могу судить, не нарушает этот принцип. Наследование и интерфейсы используются корректно.
+4. **ISP (Принцип разделения интерфейса)**:
+    - Ваши интерфейсы, такие как `SortStrategy`, `TreeLoader`, `TreeSaver` и `TreeSorter`, остаются маленькими и специфическими, что соответствует этому принципу.
+5. **DIP (Принцип инверсии зависимостей)**:
+    - Ваш код продолжает зависеть от абстракций (интерфейсов), а не от конкретных реализаций, что соответствует этому принципу.
+**S - Принцип единственной ответственности (Single Responsibility Principle, SRP)**: Класс должен иметь только одну причину для изменения.
+**O - Принцип открытости/закрытости (Open/Closed Principle, OCP)**: Классы должны быть открыты для расширения, но закрыты для изменения.
+**L - Принцип подстановки Барбары Лисков (Liskov Substitution Principle, LSP)**: Подклассы должны дополнять, а не заменять поведение базовых классов.
+**I - Принцип разделения интерфейса (Interface Segregation Principle, ISP)**: Клиенты не должны зависеть от интерфейсов, которые они не используют.
+**D - Принцип инверсии зависимостей (Dependency Inversion Principle, DIP)**: Зависимости должны исходить от абстракций, а не от конкретных реализаций.
